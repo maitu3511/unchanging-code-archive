@@ -23,7 +23,7 @@ import { HomeHeroBackground } from "./HomeHeroBackground";
 import { AGENCY_CONFIG } from "../data/agencyData";
 import { getWhatsAppUrl } from "../utils/whatsapp";
 import homeHero from "../assets/heroes/home-hero.jpg";
-import heroAgencyCommandImg from "../assets/images/hero_agency_command_1790495066620.jpg";
+import heroAgencyCommandImg from "../assets/images/agency-cursor-reveal.jpg.asset.json";
 
 // Dynamic Services List with Concise 1-Line Titles, Icons, Tags, and Live Impact Metrics
 const HERO_SERVICES = [
@@ -202,8 +202,8 @@ export const Hero: React.FC<HeroProps> = ({
         className="absolute inset-0 z-[1] pointer-events-none overflow-hidden opacity-0 transition-opacity duration-500 ease-out [mask-image:radial-gradient(circle_290px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_32%,transparent_100%)] [-webkit-mask-image:radial-gradient(circle_290px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_32%,transparent_100%)]"
       >
         <img
-          src={heroAgencyCommandImg}
-          alt="DigiBasera Futuristic Agency Command Center"
+          src={heroAgencyCommandImg.url}
+          alt="Futuristic digital agency workspace"
           className="w-full h-full object-cover object-center filter brightness-105 contrast-105"
           loading="eager"
           decoding="async"

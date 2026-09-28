@@ -27,3 +27,4 @@
 - [x] Repair portfolio website image and all missing videos without repeated clips
 - [x] Verify desktop/mobile render and media playback
 - [x] Replace hollow outlined lettering with solid text throughout the site
+- [x] Use the supplied agency image in the existing scroll-and-cursor hero reveal without changing the background animation or content
