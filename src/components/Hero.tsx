@@ -202,7 +202,7 @@ export const Hero: React.FC<HeroProps> = ({
       <div
         ref={revealRef}
         aria-hidden="true"
-        className="absolute inset-0 z-[1] pointer-events-none overflow-hidden opacity-0 transition-opacity duration-500 ease-out [mask-image:radial-gradient(circle_290px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_32%,transparent_100%)] [-webkit-mask-image:radial-gradient(circle_290px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_32%,transparent_100%)]"
+        className="absolute inset-0 z-[1] pointer-events-none overflow-hidden opacity-0 transition-opacity duration-500 ease-out [mask-image:radial-gradient(circle_170px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_32%,transparent_100%)] [-webkit-mask-image:radial-gradient(circle_170px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_32%,transparent_100%)] sm:[mask-image:radial-gradient(circle_290px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_32%,transparent_100%)] sm:[-webkit-mask-image:radial-gradient(circle_290px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_32%,transparent_100%)]"
       >
         <img
           src={heroAgencyCommandImg.url}
