@@ -226,6 +226,9 @@ export const Hero: React.FC<HeroProps> = ({
         />
       </div>
 
+      {/* Keep the moving image visible around the text while retaining a light reading surface beneath it. */}
+      <div aria-hidden="true" className="absolute inset-0 z-[2] pointer-events-none bg-radial from-white via-white/85 to-transparent [background-size:125%_100%] [background-position:center]" />
+
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-7 z-10">
         {/* Top Eyebrow Badge: Rating & Google Partner */}
         <motion.div
