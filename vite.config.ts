@@ -12,4 +12,7 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // On Netlify (NETLIFY=true is set automatically during Netlify builds), emit a
+  // Netlify-compatible output (.output/public + functions) instead of Cloudflare.
+  ...(process.env.NETLIFY ? { nitro: { preset: "netlify" } } : {}),
 });
