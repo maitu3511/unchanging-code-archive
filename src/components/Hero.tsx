@@ -109,12 +109,16 @@ export const Hero: React.FC<HeroProps> = ({
     reveal.style.setProperty("--reveal-y", `${y}px`);
     reveal.style.opacity = "1";
     if (revealTimerRef.current) clearTimeout(revealTimerRef.current);
-    revealTimerRef.current = setTimeout(hideHeroReveal, 2000);
   };
 
   const hideHeroReveal = () => {
     if (revealTimerRef.current) clearTimeout(revealTimerRef.current);
     if (revealRef.current) revealRef.current.style.opacity = "0";
+  };
+
+  const finishTouchReveal = () => {
+    if (revealTimerRef.current) clearTimeout(revealTimerRef.current);
+    revealTimerRef.current = setTimeout(hideHeroReveal, 1800);
   };
 
   useEffect(() => {
@@ -176,6 +180,7 @@ export const Hero: React.FC<HeroProps> = ({
         const touch = event.touches[0];
         if (touch) showHeroReveal(event.currentTarget, touch.clientX, touch.clientY);
       }}
+      onTouchEnd={finishTouchReveal}
       onPointerLeave={(event) => {
         if (event.pointerType !== "touch") hideHeroReveal();
       }}
@@ -210,7 +215,7 @@ export const Hero: React.FC<HeroProps> = ({
       <div
         ref={revealRef}
         aria-hidden="true"
-        className="absolute inset-0 z-[1] pointer-events-none overflow-hidden opacity-0 transition-opacity duration-300 ease-out motion-reduce:transition-none [mask-image:radial-gradient(circle_170px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_32%,transparent_100%)] [-webkit-mask-image:radial-gradient(circle_170px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_32%,transparent_100%)] sm:[mask-image:radial-gradient(circle_290px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_32%,transparent_100%)] sm:[-webkit-mask-image:radial-gradient(circle_290px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_32%,transparent_100%)]"
+        className="absolute inset-0 z-[1] pointer-events-none overflow-hidden opacity-0 transition-opacity duration-300 ease-out motion-reduce:transition-none [mask-image:radial-gradient(circle_190px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_45%,transparent_100%)] [-webkit-mask-image:radial-gradient(circle_190px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_45%,transparent_100%)] sm:[mask-image:radial-gradient(circle_320px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_45%,transparent_100%)] sm:[-webkit-mask-image:radial-gradient(circle_320px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_45%,transparent_100%)]"
       >
         <img
           src={revealImageUrl}
@@ -219,8 +224,6 @@ export const Hero: React.FC<HeroProps> = ({
           loading="eager"
           decoding="async"
         />
-        {/* Light scrim leaves the picture visible; the existing content remains above this layer. */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/25 pointer-events-none" />
       </div>
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-7 z-10">
