@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import SiteApp from "../SiteApp";
+import revealAsset from "../assets/images/agency-cursor-reveal.jpg.asset.json";
 import {
   SERVICES_SCHEMA,
   PORTFOLIO_ITEM_LIST_SCHEMA,
@@ -48,7 +49,10 @@ export const Route = createFileRoute("/")({
       { name: "geo.placename", content: "Rajkot, Gujarat, India" },
       { name: "geo.position", content: "22.3039;70.8022" },
     ],
-    links: [{ rel: "canonical", href: "https://digibasera.com/" }],
+    links: [
+      { rel: "canonical", href: "https://digibasera.com/" },
+      { rel: "preload", as: "image", href: `https://project--${revealAsset.project_id}.lovable.app${revealAsset.url}` },
+    ],
     scripts: [
       {
         type: "application/ld+json",

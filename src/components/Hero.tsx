@@ -215,19 +215,19 @@ export const Hero: React.FC<HeroProps> = ({
       <div
         ref={revealRef}
         aria-hidden="true"
-        className="absolute inset-0 z-[1] pointer-events-none overflow-hidden opacity-0 transition-opacity duration-300 ease-out motion-reduce:transition-none [mask-image:radial-gradient(circle_190px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_45%,transparent_100%)] [-webkit-mask-image:radial-gradient(circle_190px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_45%,transparent_100%)] sm:[mask-image:radial-gradient(circle_320px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_45%,transparent_100%)] sm:[-webkit-mask-image:radial-gradient(circle_320px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_45%,transparent_100%)]"
+        className="absolute inset-0 z-[1] pointer-events-none overflow-hidden opacity-0 transition-opacity duration-300 ease-out motion-reduce:transition-none [mask-image:radial-gradient(circle_190px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_65%,transparent_100%)] [-webkit-mask-image:radial-gradient(circle_190px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_65%,transparent_100%)] sm:[mask-image:radial-gradient(circle_320px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_65%,transparent_100%)] sm:[-webkit-mask-image:radial-gradient(circle_320px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_65%,transparent_100%)]"
       >
         <img
           src={revealImageUrl}
           alt="Futuristic digital agency workspace"
-          className="w-full h-full object-cover object-center filter brightness-105 contrast-105"
+          className="w-full h-full object-cover object-center filter brightness-110 contrast-110 saturate-125"
           loading="eager"
           decoding="async"
         />
       </div>
 
       {/* Keep the moving image visible around the text while retaining a light reading surface beneath it. */}
-      <div aria-hidden="true" className="absolute inset-0 z-[2] pointer-events-none bg-radial from-white via-white/85 to-transparent [background-size:125%_100%] [background-position:center]" />
+      <div aria-hidden="true" className="absolute inset-0 z-[2] pointer-events-none bg-radial from-white/80 via-white/45 to-transparent [background-size:90%_80%] bg-no-repeat [background-position:center]" />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-7 z-10">
         {/* Top Eyebrow Badge: Rating & Google Partner */}
