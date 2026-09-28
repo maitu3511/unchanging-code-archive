@@ -1,0 +1,672 @@
+@font-face {
+  font-family: "Fonarto";
+  src:
+    local("Fonarto"),
+    url("/fonts/Fonarto.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Glacial Indifference";
+  src:
+    local("Glacial Indifference"),
+    local("GlacialIndifference-Regular"),
+    url("/fonts/GlacialIndifference-Regular.woff") format("woff"),
+    url("/fonts/GlacialIndifference-Regular.otf") format("opentype");
+  font-weight: 100 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Glacial Indifference";
+  src:
+    local("Glacial Indifference Bold"),
+    local("GlacialIndifference-Bold"),
+    url("/fonts/GlacialIndifference-Bold.woff") format("woff"),
+    url("/fonts/GlacialIndifference-Bold.otf") format("opentype");
+  font-weight: 600 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family:
+      "Glacial Indifference",
+      "Plus Jakarta Sans",
+      "Manrope",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Subheadings, card titles, paragraphs, buttons, navigation, and normal UI text -> Glacial Indifference */
+  p,
+  a,
+  span,
+  input,
+  textarea,
+  select,
+  label,
+  li,
+  td,
+  th,
+  dd,
+  dt,
+  blockquote,
+  caption,
+  figcaption,
+  .font-subheading,
+  .font-glacial,
+  .font-sans,
+  .font-body {
+    font-family:
+      "Glacial Indifference",
+      "Plus Jakarta Sans",
+      "Manrope",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* All Subheadings (H2 to H6, section titles, card headers, subtitles) -> Glacial Indifference Bold */
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .subheading,
+  .sub-heading,
+  .font-subheading,
+  .font-heading,
+  .section-title,
+  .card-title,
+  .accordion-trigger,
+  .modal-title,
+  .dialog-title {
+    font-family:
+      "Glacial Indifference",
+      "Plus Jakarta Sans",
+      "Manrope",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      sans-serif !important;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* ALL Paragraphs & Remaining Content Across Website -> Glacial Indifference */
+  p,
+  .paragraph,
+  .body-copy,
+  .description-text {
+    font-family:
+      "Glacial Indifference",
+      "Plus Jakarta Sans",
+      "Manrope",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      sans-serif !important;
+  }
+
+  /* ALL buttons across the entire website: crisp, high-contrast, perfectly readable Glacial Indifference */
+  button,
+  button *,
+  .btn,
+  .btn *,
+  [role="button"],
+  [role="button"] *,
+  input[type="button"],
+  input[type="submit"] {
+    font-family: "Glacial Indifference", "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Main Headings (H1 headings, page hero titles, major section titles) -> Fonarto */
+  h1,
+  .hero-title,
+  .hero-heading,
+  .font-fonarto,
+  .font-main-heading,
+  .main-heading,
+  .major-section-title,
+  .font-display {
+    font-family:
+      "Fonarto",
+      "Outfit",
+      "Plus Jakarta Sans",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      sans-serif;
+    letter-spacing: 0.015em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Website Header Typography -> Fonarto Font Family */
+  #main-header,
+  #main-header nav,
+  #main-header nav a,
+  #main-header nav a span,
+  #main-header button,
+  #main-header button span,
+  .header-nav-link,
+  .header-cta-btn,
+  .header-fonarto {
+    font-family: "Fonarto", "Outfit", "Plus Jakarta Sans", sans-serif !important;
+    letter-spacing: 0.025em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Decorative highlights outside main titles use the same readable companion font. */
+  .font-serif {
+    font-family:
+      "Glacial Indifference",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      sans-serif;
+  }
+
+  /* Nested color/highlight spans must not switch a main heading back to the body font. */
+  h1 :is(span, a, .font-sans, .font-body, .font-serif),
+  .hero-title :is(span, a, .font-sans, .font-body, .font-serif),
+  .hero-heading :is(span, a, .font-sans, .font-body, .font-serif),
+  .main-heading :is(span, a, .font-sans, .font-body, .font-serif),
+  .major-section-title :is(span, a, .font-sans, .font-body, .font-serif) {
+    font-family: "Fonarto", "Glacial Indifference", sans-serif;
+  }
+
+  /* Numeric Badges, ROAS metrics, Stat Percentages, Counters & Mono elements -> Fonarto */
+  .font-mono,
+  .tabular-nums,
+  .stat-number,
+  .stat-counter,
+  .metric-badge,
+  .metric-highlight,
+  .roas-badge,
+  .kpi-value,
+  .counter-value {
+    font-family:
+      "Fonarto",
+      "Outfit",
+      "Plus Jakarta Sans",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      sans-serif;
+    letter-spacing: 0.02em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/* Custom Gold & Neutral scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8f8f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e8e1d0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c9a227;
+}
+
+/* Luxury White + Gold + Black utilities */
+.bg-warm-canvas {
+  background-color: #f8f8f6;
+}
+
+.border-gold-subtle {
+  border-color: #e8e1d0;
+}
+
+.border-gold-active {
+  border-color: #d4af37;
+}
+
+.text-gold-primary {
+  color: #c9a227;
+}
+
+.text-gold-premium {
+  color: #d4af37;
+}
+
+.text-gold-dark {
+  color: #9a7b16;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #c9a227 0%, #d4af37 50%, #9a7b16 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-subtle-glow {
+  box-shadow: 0 10px 35px -10px rgba(212, 175, 55, 0.15);
+}
+
+.gold-card-shadow {
+  box-shadow:
+    0 4px 20px -2px rgba(17, 17, 17, 0.05),
+    0 2px 6px -1px rgba(212, 175, 55, 0.06);
+}
+
+.gold-card-hover-shadow:hover {
+  box-shadow:
+    0 20px 40px -15px rgba(212, 175, 55, 0.2),
+    0 0 0 1px #d4af37;
+}
+
+/* Subtle luxury grid pattern */
+.luxury-grid-pattern {
+  background-image: radial-gradient(rgba(201, 162, 39, 0.12) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Gold line expanding effect */
+.gold-draw-line {
+  position: relative;
+}
+
+.gold-draw-line::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #d4af37;
+  transition: width 0.4s ease-in-out;
+}
+
+/* Smooth Hero Background Ken Burns / Zoom-In Zoom-Out Animation */
+@keyframes hero-zoom-pan {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-hero-zoom {
+  animation: hero-zoom-pan 16s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.animate-hero-zoom-slow {
+  animation: hero-zoom-pan 22s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes about-hero-cinematic {
+  0% {
+    transform: scale(1.03) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.09) translate3d(-1.25%, -0.75%, 0);
+  }
+  100% {
+    transform: scale(1.05) translate3d(0.75%, -0.25%, 0);
+  }
+}
+
+.about-hero-cinematic {
+  animation: about-hero-cinematic 18s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Prevent the final letter of gradient / italic headings from being clipped */
+.bg-clip-text {
+  padding-right: 0.1em;
+  margin-right: -0.06em;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+
+.bg-clip-text.italic,
+.italic.font-serif {
+  padding-right: 0.14em;
+  margin-right: -0.08em;
+}
+
+/* Continuous Auto-Scrolling Marquee with Performance Optimizations */
+
+@keyframes marquee-linear {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@-webkit-keyframes marquee-linear {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes marquee-reverse {
+  0% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee-track {
+  display: flex !important;
+  width: max-content !important;
+  flex-shrink: 0 !important;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  animation: marquee-linear 42s linear infinite !important;
+}
+
+.animate-marquee-services {
+  display: flex !important;
+  width: max-content !important;
+  flex-shrink: 0 !important;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  animation: marquee-linear 255s linear infinite !important;
+}
+
+.animate-marquee-services:hover,
+.services-marquee-container:hover .animate-marquee-services,
+.group\/services-marquee:hover .animate-marquee-services,
+.pause-marquee,
+.animate-marquee-services.pause-marquee,
+.animate-marquee-track:hover,
+.animate-marquee-track.pause-marquee {
+  animation-play-state: paused !important;
+  -webkit-animation-play-state: paused !important;
+}
+
+.animate-marquee-testimonials {
+  display: flex !important;
+  width: max-content !important;
+  flex-shrink: 0 !important;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  animation: marquee-linear 62s linear infinite !important;
+}
+
+.animate-marquee-testimonials-reverse {
+  display: flex !important;
+  width: max-content !important;
+  flex-shrink: 0 !important;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  animation: marquee-reverse 42s linear infinite !important;
+}
+
+.animate-marquee-track-fast {
+  animation-duration: 26s;
+}
+
+.animate-marquee-track-slow {
+  animation-duration: 55s;
+}
+
+.pause-marquee {
+  animation-play-state: paused !important;
+}
+
+/* Subtle Float Animation */
+@keyframes float-gentle {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 4s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Shimmer Light Sweep */
+@keyframes shimmer-sweep {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(212, 175, 55, 0.15) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer-sweep 3.5s infinite;
+}
+
+/* Premium Button Sheen Light Sweep on Hover */
+.btn-sheen {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-sheen::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 100%
+  );
+  transform: skewX(-22deg);
+  transition: none;
+  pointer-events: none;
+}
+
+.btn-sheen:hover::after {
+  left: 140%;
+  transition: left 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Luxury Card Lift & Ambient Gold Halo */
+.card-luxury-hover {
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease;
+  will-change: transform, box-shadow;
+}
+
+.card-luxury-hover:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 16px 36px -10px rgba(212, 175, 55, 0.22),
+    0 4px 12px -2px rgba(17, 17, 17, 0.04);
+  border-color: #d4af37;
+}
+
+/* Breathing Gold Ambient Pulse */
+@keyframes pulse-gold-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(212, 175, 55, 0);
+  }
+}
+
+.animate-pulse-gold {
+  animation: pulse-gold-glow 2.8s infinite ease-in-out;
+}
+
+/* Page Top Progress Bar */
+@keyframes top-progress-pulse {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-top-progress {
+  animation: top-progress-pulse 1.8s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Responsive device timing for continuous marquee scroll across all viewports */
+@media (max-width: 768px) {
+  .animate-marquee-track {
+    animation-duration: 28s !important;
+  }
+  .animate-marquee-services {
+    animation-duration: 235s !important;
+  }
+  .animate-marquee-testimonials,
+  .animate-marquee-testimonials-reverse {
+    animation-duration: 52s !important;
+  }
+}
+
+/* Graceful Reduced Motion: Maintain gentle continuous motion while respecting motion sensitivity */
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-zoom,
+  .animate-hero-zoom-slow,
+  .about-hero-cinematic {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .animate-marquee-track,
+  .animate-marquee-testimonials,
+  .animate-marquee-testimonials-reverse {
+    animation-duration: 75s !important;
+  }
+  .animate-marquee-services {
+    animation-duration: 280s !important;
+  }
+}
+
+/* Typography Legibility Floor: Ensure all badges, tags, pills, and small text across the site are readable and properly sized without changing font styles */
+.text-\[8px\],
+.text-\[9px\],
+.text-\[10px\] {
+  font-size: 0.75rem !important; /* 12px minimum floor for crisp readability */
+  line-height: 1.15rem !important;
+}
+
+.text-\[11px\] {
+  font-size: 0.8125rem !important; /* 13px */
+  line-height: 1.25rem !important;
+}
+
+::selection {
+  background-color: #d4af37;
+  color: #ffffff;
+}

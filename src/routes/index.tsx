@@ -1,24 +1,76 @@
 import { createFileRoute } from "@tanstack/react-router";
+import SiteApp from "../SiteApp";
+import {
+  SERVICES_SCHEMA,
+  PORTFOLIO_ITEM_LIST_SCHEMA,
+  FAQ_SCHEMA,
+  getBreadcrumbSchema,
+} from "../data/seoData";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      {
+        title: "DigiBasera | Top Digital Marketing Agency & Web Development in Rajkot, Gujarat",
+      },
+      {
+        name: "description",
+        content:
+          "DigiBasera is a premier digital marketing & web technology agency in Rajkot, Gujarat. SEO, Google Ads PPC, custom web design, e-commerce and social media marketing.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Digital Marketing Agency Rajkot, Best SEO Company Gujarat, Web Development Agency Rajkot, Social Media Marketing Gujarat, Google Ads PPC Management",
+      },
+      {
+        property: "og:title",
+        content: "DigiBasera | Premier Digital Marketing Agency & Custom Web Development",
+      },
+      {
+        property: "og:description",
+        content:
+          "Commercial portfolio & live client showcase: live websites, high-converting social media creatives, and verified ROI case studies.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://digibasera.com/" },
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:title",
+        content: "DigiBasera | Premier Digital Marketing & Web Agency",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Explore live client websites, high-engagement social media campaigns, and verified SEO results from DigiBasera in Rajkot, Gujarat.",
+      },
+      { name: "geo.region", content: "IN-GJ" },
+      { name: "geo.placename", content: "Rajkot, Gujarat, India" },
+      { name: "geo.position", content: "22.3039;70.8022" },
+    ],
+    links: [{ rel: "canonical", href: "https://digibasera.com/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(SERVICES_SCHEMA),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(PORTFOLIO_ITEM_LIST_SCHEMA),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(FAQ_SCHEMA),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(getBreadcrumbSchema("Home", "https://digibasera.com/")),
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
+  return <SiteApp />;
 }
