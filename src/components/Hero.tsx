@@ -96,6 +96,7 @@ export const Hero: React.FC<HeroProps> = ({
   const [typingSpeed, setTypingSpeed] = useState(2500);
   const revealRef = useRef<HTMLDivElement>(null);
   const revealTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const revealImageUrl = `https://project--${heroAgencyCommandImg.project_id}.lovable.app${heroAgencyCommandImg.url}`;
 
   // Keep the reveal centred on the cursor or touch point, without intercepting the hero.
   const showHeroReveal = (target: HTMLElement, clientX: number, clientY: number) => {
@@ -108,7 +109,7 @@ export const Hero: React.FC<HeroProps> = ({
     reveal.style.setProperty("--reveal-y", `${y}px`);
     reveal.style.opacity = "1";
     if (revealTimerRef.current) clearTimeout(revealTimerRef.current);
-    revealTimerRef.current = setTimeout(hideHeroReveal, 1600);
+    revealTimerRef.current = setTimeout(hideHeroReveal, 2000);
   };
 
   const hideHeroReveal = () => {
@@ -167,13 +168,20 @@ export const Hero: React.FC<HeroProps> = ({
         if (event.pointerType !== "touch") showHeroReveal(event.currentTarget, event.clientX, event.clientY);
       }}
       onWheel={(event) => showHeroReveal(event.currentTarget, event.clientX, event.clientY)}
+      onTouchStart={(event) => {
+        const touch = event.touches[0];
+        if (touch) showHeroReveal(event.currentTarget, touch.clientX, touch.clientY);
+      }}
       onTouchMove={(event) => {
         const touch = event.touches[0];
         if (touch) showHeroReveal(event.currentTarget, touch.clientX, touch.clientY);
       }}
-      onTouchEnd={hideHeroReveal}
-      onPointerLeave={hideHeroReveal}
-      onPointerCancel={hideHeroReveal}
+      onPointerLeave={(event) => {
+        if (event.pointerType !== "touch") hideHeroReveal();
+      }}
+      onPointerCancel={(event) => {
+        if (event.pointerType !== "touch") hideHeroReveal();
+      }}
     >
       {/* Background Image with Ken Burns / Zoom Effect */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden -z-20">
@@ -202,10 +210,10 @@ export const Hero: React.FC<HeroProps> = ({
       <div
         ref={revealRef}
         aria-hidden="true"
-        className="absolute inset-0 z-[1] pointer-events-none overflow-hidden opacity-0 transition-opacity duration-500 ease-out [mask-image:radial-gradient(circle_170px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_32%,transparent_100%)] [-webkit-mask-image:radial-gradient(circle_170px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_32%,transparent_100%)] sm:[mask-image:radial-gradient(circle_290px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_32%,transparent_100%)] sm:[-webkit-mask-image:radial-gradient(circle_290px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_32%,transparent_100%)]"
+        className="absolute inset-0 z-[1] pointer-events-none overflow-hidden opacity-0 transition-opacity duration-300 ease-out motion-reduce:transition-none [mask-image:radial-gradient(circle_170px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_32%,transparent_100%)] [-webkit-mask-image:radial-gradient(circle_170px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_32%,transparent_100%)] sm:[mask-image:radial-gradient(circle_290px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_32%,transparent_100%)] sm:[-webkit-mask-image:radial-gradient(circle_290px_at_var(--reveal-x,-600px)_var(--reveal-y,-600px),black_32%,transparent_100%)]"
       >
         <img
-          src={heroAgencyCommandImg.url}
+          src={revealImageUrl}
           alt="Futuristic digital agency workspace"
           className="w-full h-full object-cover object-center filter brightness-105 contrast-105"
           loading="eager"
