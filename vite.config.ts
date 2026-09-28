@@ -13,6 +13,6 @@ export default defineConfig({
     server: { entry: "server" },
   },
   // On Netlify (NETLIFY=true is set automatically during Netlify builds), emit a
-  // Netlify-compatible output (.output/public + functions) instead of Cloudflare.
+  // Netlify-compatible output (dist + .netlify/functions-internal) instead of Cloudflare.
   ...(process.env.NETLIFY ? { nitro: { preset: "netlify" } } : {}),
 });
