@@ -1,0 +1,29 @@
+- [x] Home hero background video को सभी browsers/viewports पर साफ़ दिखाना
+- [x] Home typewriter text और Careers के “Accelerate Your Career.” को golden बनाना
+- [x] Image loading priorities सुधारकर initial page speed तेज़ करना
+- [x] Desktop और mobile preview में सभी fixes verify करना
+- [x] Home hero से background image हटाकर professional agency video लगाना
+- [x] About page के core team photos में faces का framing ठीक करना
+- [x] Pricing hero background से दोनों diagonal cross lines हटाना
+
+## Current requests
+
+- [x] Replace the About section image with a flexible carousel
+- [x] Slow the home services auto-scroll
+- [x] Reserve fixed typewriter space to prevent layout shifting
+- [x] Add Screen Fixing under Websites without changing the portfolio design
+- [x] Add 12 distinct business offer, promotion, and festival social post samples
+- [x] Add 7 distinct logo sample images for different businesses to portfolio
+- [x] Add 9 distinct visiting card sample images for different businesses to portfolio
+- [x] Add four distinct business video/reel samples to Video & Reels
+- [x] Add six wedding creative image samples
+- [x] Reveal an About-style colourful image around the cursor on the home hero without changing existing content or animations
+- [x] Apply Fonarto to main headings and Glacial Indifference to subheadings, paragraphs, and remaining text without other visual changes
+- [x] Reduce image/font/media requests on first load without changing the design
+- [x] Make content pages indexable with accurate metadata, sitemap, and crawlable navigation
+- [x] Verify page rendering and load behavior on desktop and mobile
+- [x] Restore ZIP site with original design intact
+- [x] Show hero hidden image only while scrolling over hero
+- [x] Repair portfolio website image and all missing videos without repeated clips
+- [x] Verify desktop/mobile render and media playback
+- [x] Replace hollow outlined lettering with solid text throughout the site

@@ -1,5 +1,6 @@
 @import "tailwindcss" source(none);
 @source "../src";
+@import "./app-site.css";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -19,6 +20,26 @@
  */
 
 @theme inline {
+  --font-sans:
+    "Glacial Indifference", "Plus Jakarta Sans", "Manrope", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  --font-body:
+    "Glacial Indifference", "Plus Jakarta Sans", "Manrope", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  --font-glacial:
+    "Glacial Indifference", "Plus Jakarta Sans", "Manrope", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  --font-heading:
+    "Glacial Indifference", "Plus Jakarta Sans", "Manrope", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  --font-fonarto:
+    "Fonarto", "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display:
+    "Fonarto", "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif:
+    "Fonarto", "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono:
+    "Fonarto", "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
