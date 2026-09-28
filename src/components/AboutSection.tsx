@@ -145,7 +145,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                 <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
                 <span>ABOUT DIGIBASERA</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] font-heading font-fonarto tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] font-heading font-fonarto tracking-tight leading-tight requested-fonarto-heading">
                 Your Strategic Growth Partner in the{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9A7B16] via-[#D4AF37] to-[#C9A227] italic font-serif">
                   Digital Space

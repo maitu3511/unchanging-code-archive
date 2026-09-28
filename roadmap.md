@@ -28,5 +28,8 @@
 - [x] Verify desktop/mobile render and media playback
 - [x] Replace hollow outlined lettering with solid text throughout the site
 - [x] Use the supplied agency image in the existing scroll-and-cursor hero reveal without changing the background animation or content
-- [x] Make the hero image visibly follow cursor movement and touch scrolling while preserving existing content and animation
+- [x] Keep the hero image visible while the cursor remains over it, and reveal it on touch without altering content or animation
 - [x] Make the reveal work on touch devices and load its image when hosted outside Lovable
+- [x] Apply the supplied Fonarto font only to the named headings across the site and inquiry form
+- [x] Improve home client review text readability without changing other fonts or layout
+- [x] Check named headings and reviews on desktop and mobile

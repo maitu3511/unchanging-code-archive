@@ -150,7 +150,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
             <span>FULL-SERVICE AGENCY CAPABILITIES</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111111] font-heading font-fonarto tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111111] font-heading font-fonarto tracking-tight requested-fonarto-heading">
             Our Digital Growth{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9A7B16] via-[#D4AF37] to-[#C9A227] italic font-serif">
               Services

@@ -66,7 +66,7 @@ export const HowWeWork: React.FC = () => {
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
             <span>TRANSPARENT 5-STAGE GROWTH METHODOLOGY</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111111] font-heading tracking-tight min-h-[1.2em]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111111] font-heading tracking-tight min-h-[1.2em] requested-fonarto-heading">
             How We <TypewriterText phrases="Drive Results" />
           </h2>
           <p className="text-sm sm:text-base text-[#555555] mt-4 leading-relaxed">

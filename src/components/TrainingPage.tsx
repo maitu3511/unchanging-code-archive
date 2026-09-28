@@ -123,7 +123,7 @@ export const TrainingPage: React.FC<TrainingPageProps> = ({
                 </div>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#111111] font-heading font-fonarto tracking-tight leading-[1.15]">
+              <h1 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#111111] font-heading font-fonarto tracking-tight leading-[1.15] requested-fonarto-heading">
                 90 Days Free Classes.{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9A7B16] via-[#D4AF37] to-[#B89018] italic font-serif">
                   Learn Real Skills.
@@ -299,7 +299,7 @@ export const TrainingPage: React.FC<TrainingPageProps> = ({
               <Gift className="w-4 h-4 text-[#D4AF37]" />
               <span>{FREE_TRAINING_INITIATIVE.badge}</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111111] font-heading tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111111] font-heading tracking-tight requested-fonarto-heading">
               {FREE_TRAINING_INITIATIVE.title}
             </h2>
             <div className="mt-3 p-3 max-w-2xl mx-auto rounded-lg bg-white border border-[#E8E1D0]">
@@ -450,7 +450,7 @@ export const TrainingPage: React.FC<TrainingPageProps> = ({
               <span className="text-xs font-black uppercase tracking-wider text-[#9A7B16] font-heading">
                 Step-by-Step Curriculum
               </span>
-              <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-heading mt-1">
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-heading mt-1 requested-fonarto-heading">
                 Your 90-Day Learning Journey
               </h3>
               <p className="text-xs sm:text-sm text-[#555555] mt-1">
@@ -490,7 +490,7 @@ export const TrainingPage: React.FC<TrainingPageProps> = ({
       <section className="py-16 bg-[#F8F8F6] border-b border-[#E8E1D0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#111111] font-heading">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#111111] font-heading requested-fonarto-heading">
               Why Learn Digital Marketing With Us?
             </h2>
             <p className="text-xs sm:text-sm text-[#555555] mt-2">
@@ -528,7 +528,7 @@ export const TrainingPage: React.FC<TrainingPageProps> = ({
             <BookOpen className="w-3.5 h-3.5 text-[#D4AF37]" />
             <span>Structured Career Tracks</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] font-heading">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] font-heading requested-fonarto-heading">
             Choose Your Learning Path
           </h2>
           <p className="text-xs sm:text-sm text-[#555555] mt-2">
@@ -659,7 +659,7 @@ export const TrainingPage: React.FC<TrainingPageProps> = ({
       <section className="py-16 bg-[#F8F8F6] border-y border-[#E8E1D0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#111111] font-heading">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#111111] font-heading requested-fonarto-heading">
               What You Will Learn Across 90 Days
             </h2>
             <p className="text-xs sm:text-sm text-[#555555] mt-2">
@@ -697,7 +697,7 @@ export const TrainingPage: React.FC<TrainingPageProps> = ({
                 <span>Certification After 90-Day Course Completion</span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl font-bold text-white font-heading">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white font-heading requested-fonarto-heading">
                 Verifiable Certificate to Boost Your Career Credentials
               </h2>
 
@@ -770,7 +770,7 @@ export const TrainingPage: React.FC<TrainingPageProps> = ({
               <Briefcase className="w-3.5 h-3.5 text-[#D4AF37]" />
               <span>Career Acceleration</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] font-heading">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] font-heading requested-fonarto-heading">
               Learn Skills. Get Career Support.
             </h2>
             <p className="text-xs sm:text-sm text-[#555555] mt-2">
@@ -835,7 +835,7 @@ export const TrainingPage: React.FC<TrainingPageProps> = ({
       {/* 8. STUDENT JOURNEY (5 Steps) */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#111111] font-heading">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#111111] font-heading requested-fonarto-heading">
             Your 5-Step Path to a Digital Career
           </h2>
           <p className="text-xs sm:text-sm text-[#555555] mt-2">

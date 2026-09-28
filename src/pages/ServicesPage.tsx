@@ -882,7 +882,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#111111] font-heading font-fonarto tracking-tight leading-tight max-w-4xl mx-auto">
-            Engineered for Commercial Growth &{" "}
+            <span className="requested-fonarto-heading">Engineered for Commercial Growth &</span>{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9A7B16] via-[#D4AF37] to-[#B89018] italic font-serif">
               Unmistakable Authority
             </span>

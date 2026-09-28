@@ -225,6 +225,12 @@
     font-family: "Fonarto", "Glacial Indifference", sans-serif;
   }
 
+  /* Only the specifically requested display lines use Fonarto; other copy retains its font. */
+  .requested-fonarto-heading,
+  .requested-fonarto-heading :is(span, a) {
+    font-family: "Fonarto", "Glacial Indifference", sans-serif !important;
+  }
+
   /* Numeric Badges, ROAS metrics, Stat Percentages, Counters & Mono elements -> Fonarto */
   .font-mono,
   .tabular-nums,

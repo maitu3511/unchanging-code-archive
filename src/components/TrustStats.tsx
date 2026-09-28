@@ -162,7 +162,7 @@ export const TrustStats: React.FC = () => {
             <span>Proven Track Record</span>
           </div>
 
-          <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-heading tracking-tight">
+          <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-heading tracking-tight requested-fonarto-heading">
             Trusted by Businesses Looking to Scale Profitably
           </h3>
           <p className="text-xs sm:text-sm text-[#555555] max-w-lg mx-auto font-normal leading-relaxed">
