@@ -2,11 +2,28 @@
 // Do not add those plugins manually. Extra options can be passed via defineConfig({ vite: { ... } }).
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// STATIC_BUILD=true -> fully static output for shared hosting (Hostinger etc.)
+const isStatic = process.env.STATIC_BUILD === "true";
+
 export default defineConfig({
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    ...(isStatic
+      ? {
+          // Pages not linked from the homepage are listed explicitly so they get prerendered too.
+          pages: ["blog", "process", "areas-we-serve", "terms", "privacy"].map((p) => ({
+            path: `/${p}`,
+          })),
+          prerender: {
+            enabled: true,
+            crawlLinks: true,
+            autoSubfolderIndex: true,
+            failOnError: false,
+          },
+        }
+      : {}),
   },
   // On Netlify (NETLIFY=true is set automatically during Netlify builds), emit a
   // Netlify-compatible output (dist + .netlify/functions-internal) instead of Cloudflare.
