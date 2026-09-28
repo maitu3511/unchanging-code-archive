@@ -97,27 +97,23 @@ export const Hero: React.FC<HeroProps> = ({
   const revealRef = useRef<HTMLDivElement>(null);
   const revealTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Handles cursor movement across desktop and touch dragging
-  const handleHeroPointerMove = (event: React.PointerEvent<HTMLElement> | React.WheelEvent<HTMLElement>) => {
+  // Keep the reveal centred on the cursor or touch point, without intercepting the hero.
+  const showHeroReveal = (target: HTMLElement, clientX: number, clientY: number) => {
     const reveal = revealRef.current;
     if (!reveal) return;
-    const bounds = event.currentTarget.getBoundingClientRect();
-    const x = event.clientX - bounds.left;
-    const y = event.clientY - bounds.top;
+    const bounds = target.getBoundingClientRect();
+    const x = clientX - bounds.left;
+    const y = clientY - bounds.top;
     reveal.style.setProperty("--reveal-x", `${x}px`);
     reveal.style.setProperty("--reveal-y", `${y}px`);
+    reveal.style.opacity = "1";
+    if (revealTimerRef.current) clearTimeout(revealTimerRef.current);
+    revealTimerRef.current = setTimeout(hideHeroReveal, 1600);
   };
 
   const hideHeroReveal = () => {
     if (revealTimerRef.current) clearTimeout(revealTimerRef.current);
     if (revealRef.current) revealRef.current.style.opacity = "0";
-  };
-
-  const handleHeroWheel = (event: React.WheelEvent<HTMLElement>) => {
-    handleHeroPointerMove(event);
-    if (revealRef.current) revealRef.current.style.opacity = "1";
-    if (revealTimerRef.current) clearTimeout(revealTimerRef.current);
-    revealTimerRef.current = setTimeout(hideHeroReveal, 850);
   };
 
   useEffect(() => {
@@ -167,8 +163,15 @@ export const Hero: React.FC<HeroProps> = ({
     <section
       className="relative pt-[72px] sm:pt-[78px] pb-16 lg:pt-[82px] lg:pb-24 overflow-hidden bg-[#FAF9F5] text-[#111111] border-b border-[#E8E1D0] isolate"
       id="hero-section"
-      onPointerMove={handleHeroPointerMove}
-      onWheel={handleHeroWheel}
+      onPointerMove={(event) => {
+        if (event.pointerType !== "touch") showHeroReveal(event.currentTarget, event.clientX, event.clientY);
+      }}
+      onWheel={(event) => showHeroReveal(event.currentTarget, event.clientX, event.clientY)}
+      onTouchMove={(event) => {
+        const touch = event.touches[0];
+        if (touch) showHeroReveal(event.currentTarget, touch.clientX, touch.clientY);
+      }}
+      onTouchEnd={hideHeroReveal}
       onPointerLeave={hideHeroReveal}
       onPointerCancel={hideHeroReveal}
     >
@@ -208,9 +211,8 @@ export const Hero: React.FC<HeroProps> = ({
           loading="eager"
           decoding="async"
         />
-        {/* Soft protective contrast scrim so all text, animations, and buttons stay 100% clear and legible */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/20 to-white/65 pointer-events-none" />
-        <div className="absolute inset-0 bg-radial from-transparent via-white/10 to-white/40 pointer-events-none" />
+        {/* Light scrim leaves the picture visible; the existing content remains above this layer. */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/25 pointer-events-none" />
       </div>
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-7 z-10">

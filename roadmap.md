@@ -28,3 +28,4 @@
 - [x] Verify desktop/mobile render and media playback
 - [x] Replace hollow outlined lettering with solid text throughout the site
 - [x] Use the supplied agency image in the existing scroll-and-cursor hero reveal without changing the background animation or content
+- [x] Make the hero image visibly follow cursor movement and touch scrolling while preserving existing content and animation
