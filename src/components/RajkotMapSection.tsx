@@ -42,7 +42,7 @@ export const RajkotMapSection: React.FC = () => {
             <MapPin className="w-3.5 h-3.5 text-[#D4AF37]" />
             <span>Our Location & Agency Hub</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] font-heading font-fonarto tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] font-heading font-fonarto tracking-tight requested-fonarto-heading">
             Visit Our Office in{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9A7B16] via-[#D4AF37] to-[#C9A227]">
               Rajkot, Gujarat
@@ -70,7 +70,7 @@ export const RajkotMapSection: React.FC = () => {
                     Open for Visits
                   </span>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-heading">
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-heading requested-fonarto-heading">
                   Digi Basera Marketing Agency
                 </h3>
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#FAF8F2] border border-[#E8E1D0] mt-2.5">

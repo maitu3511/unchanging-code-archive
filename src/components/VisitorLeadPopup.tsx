@@ -355,7 +355,7 @@ export const VisitorLeadPopup: React.FC<VisitorLeadPopupProps> = ({
 
                       {/* Headline */}
                       <div className="space-y-1.5">
-                        <h3 className="text-xl sm:text-2xl font-extrabold text-[#111111] leading-tight font-heading">
+                         <h3 className="text-xl sm:text-2xl font-extrabold text-[#111111] leading-tight font-heading requested-fonarto-heading">
                           Scale Your{" "}
                           <span className="text-[#B8860B] block font-extrabold">
                             Digital Footprint.
@@ -402,7 +402,7 @@ export const VisitorLeadPopup: React.FC<VisitorLeadPopupProps> = ({
                   <div className="md:col-span-7 p-6 sm:p-8 bg-white flex flex-col justify-center">
                     <div className="space-y-1 mb-4">
                       <div className="flex items-center justify-between">
-                        <h4 className="text-xl sm:text-2xl font-bold font-heading text-[#111827]">
+                         <h4 className="text-xl sm:text-2xl font-bold font-heading text-[#111827] requested-fonarto-heading">
                           Enquire Now
                         </h4>
                         <span className="text-xs uppercase font-bold tracking-widest text-[#B8860B] bg-[#FAF6EC] px-2.5 py-0.5 rounded-full border border-[#E8DFC5]">

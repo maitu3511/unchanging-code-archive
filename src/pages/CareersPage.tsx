@@ -195,7 +195,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({ onNavigate }) => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight font-heading leading-tight text-[#111111] [text-shadow:0_1px_2px_rgba(255,255,255,0.9),0_2px_22px_rgba(255,255,255,0.8)]"
           >
-            Build the Future of Digital Growth.{" "}
+            <span className="requested-fonarto-heading">Build the Future of Digital Growth.</span>{" "}
             <span className="text-[#B89018] italic font-serif drop-shadow-[0_2px_10px_rgba(255,255,255,0.7)]">
               Accelerate Your Career.
             </span>

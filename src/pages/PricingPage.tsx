@@ -292,7 +292,7 @@ export const PricingPage: React.FC<PricingPageProps> = ({ onNavigate, onOpenCons
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight font-heading leading-tight text-[#111111] max-w-4xl mx-auto"
           >
-            Flexible Digital{" "}
+            <span className="requested-fonarto-heading">Flexible Digital</span>{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9A7B16] via-[#D4AF37] to-[#B89018] font-serif italic">
               Growth Solutions
             </span>
@@ -946,7 +946,7 @@ const DigitalGrowthPackagesSection: React.FC<DigitalGrowthPackagesSectionProps> 
           <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
           <span>All-In-One Retainers</span>
         </div>
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] font-heading">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] font-heading requested-fonarto-heading">
           Digital Growth Packages
         </h2>
         <p className="text-xs sm:text-sm text-[#555555]">

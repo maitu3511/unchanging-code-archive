@@ -87,7 +87,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledService
                 <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
                 <span>START YOUR GROWTH JOURNEY</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111111] font-heading font-fonarto tracking-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111111] font-heading font-fonarto tracking-tight requested-fonarto-heading">
                 Let's Scale Your{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9A7B16] via-[#D4AF37] to-[#C9A227] italic font-serif">
                   Business

@@ -59,7 +59,7 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ onOpenConsultation }) 
             <span>THE DIGIBASERA STANDARD</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111111] font-heading font-fonarto tracking-tight leading-[1.25]">
-            <span className="block mb-1 sm:mb-2">Why Businesses Choose</span>
+            <span className="block mb-1 sm:mb-2 requested-fonarto-heading">Why Businesses Choose</span>
             <span className="h-10 sm:h-12 lg:h-14 flex items-center justify-center select-none overflow-hidden">
               <TypewriterText
                 phrases={[

@@ -43,7 +43,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
             <span>100% Verified Client Samples</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111111] font-heading font-fonarto tracking-tight">
-            Client Work &{" "}
+            <span className="requested-fonarto-heading">Client Work &</span>{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9A7B16] via-[#D4AF37] to-[#C9A227] italic font-serif">
               Portfolio Samples
             </span>

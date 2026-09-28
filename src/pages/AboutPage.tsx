@@ -197,7 +197,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConsulta
                   <span>Founder's Vision & Commitment</span>
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#111111] font-heading font-fonarto tracking-tight">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#111111] font-heading font-fonarto tracking-tight requested-fonarto-heading">
                   Turning Digital Ambition into{" "}
                   <span className="italic font-serif text-transparent bg-clip-text bg-gradient-to-r from-[#9A7B16] via-[#D4AF37] to-[#C9A227]">
                     Tangible Market Dominance
@@ -243,7 +243,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenConsulta
               <Users className="w-3.5 h-3.5 text-[#D4AF37]" />
               <span>Leadership & Growth Engineers</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] font-heading font-fonarto tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] font-heading font-fonarto tracking-tight requested-fonarto-heading">
               Meet Our Core Team
             </h2>
             <p className="text-sm text-[#555555] mt-2">

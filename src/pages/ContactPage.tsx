@@ -25,7 +25,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate, onOpenCons
             <span>Connect with Growth Leadership</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111111] font-heading font-fonarto tracking-tight">
-            Contact &{" "}
+            <span className="requested-fonarto-heading">Contact &</span>{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9A7B16] via-[#D4AF37] to-[#C9A227] italic font-serif">
               Free Growth Audit
             </span>

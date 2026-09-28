@@ -103,7 +103,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onOpen
           </div>
 
           {/* Quote Text - High Legibility */}
-          <p className="text-sm sm:text-[15px] font-medium text-[#111111] leading-relaxed italic line-clamp-3 mb-3">
+          <p className="text-base font-medium text-[#111111] leading-relaxed line-clamp-3 mb-3">
             "{item.quote}"
           </p>
         </div>
@@ -169,7 +169,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onOpen
             <span>CLIENT REVIEWS & SUCCESS STORIES</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111111] font-heading font-fonarto tracking-tight">
-            Trusted by Clients Across{" "}
+            <span className="requested-fonarto-heading">Trusted by Clients Across</span>{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9A7B16] via-[#D4AF37] to-[#C9A227] italic font-serif">
               Industries
             </span>
@@ -296,7 +296,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onOpen
 
               {/* Full Quote */}
               <div className="relative my-4 pl-4 border-l-2 border-[#D4AF37]">
-                <p className="text-sm text-[#222222] leading-relaxed italic">
+                <p className="text-base text-[#222222] leading-relaxed">
                   "{selectedReview.quote}"
                 </p>
               </div>
