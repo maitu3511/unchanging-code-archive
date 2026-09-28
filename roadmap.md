@@ -33,3 +33,5 @@
 - [x] Apply the supplied Fonarto font only to the named headings across the site and inquiry form
 - [x] Improve home client review text readability without changing other fonts or layout
 - [x] Check named headings and reviews on desktop and mobile
+- [x] Keep home hero lettering legible when the hidden image is revealed
+- [x] Remove the four floating labels from the home hero background animation

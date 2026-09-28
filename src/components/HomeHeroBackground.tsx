@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "motion/react";
-import { TrendingUp, ShieldCheck, Zap, Search, Sparkles, Award, CheckCircle2 } from "lucide-react";
 
 interface HeroParticle {
   x: number;
@@ -300,85 +299,6 @@ export const HomeHeroBackground: React.FC = () => {
       {/* Soft Center Scrim for Pristine Typography Contrast & Reading Clarity */}
       <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[65%] bg-radial from-white/90 via-white/50 to-transparent rounded-full blur-2xl pointer-events-none z-[1]" />
 
-      {/* Floating Transparent Glassmorphic Agency Badges (Matching Pricing Hero Luxury Design) */}
-      {/* 1. Google & Meta Partner - Top Left */}
-      <motion.div
-        animate={{
-          y: [-7, 7, -7],
-          x: [-3, 3, -3],
-          rotate: [0, 1.5, -1.5, 0],
-        }}
-        transition={{
-          duration: 7.2,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute top-[18%] left-[4%] hidden xl:flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white/90 border border-[#D4AF37]/45 shadow-xs backdrop-blur-md text-[#9A7B16] text-xs font-semibold"
-      >
-        <div className="w-6 h-6 rounded-lg bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37]">
-          <CheckCircle2 className="w-3.5 h-3.5" />
-        </div>
-        <span className="font-fonarto text-[#111111]">Google & Meta Certified Partner</span>
-      </motion.div>
-
-      {/* 2. High ROAS Performance - Top Right */}
-      <motion.div
-        animate={{
-          y: [7, -7, 7],
-          x: [3, -3, 3],
-          rotate: [0, -1.5, 1.5, 0],
-        }}
-        transition={{
-          duration: 7.5,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 0.6,
-        }}
-        className="absolute top-[16%] right-[4%] hidden xl:flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white/90 border border-emerald-500/35 shadow-xs backdrop-blur-md text-emerald-800 text-xs font-semibold"
-      >
-        <div className="w-6 h-6 rounded-lg bg-emerald-500/15 flex items-center justify-center text-emerald-600">
-          <TrendingUp className="w-3.5 h-3.5" />
-        </div>
-        <span className="font-fonarto text-[#111111]">8.4x Verified Performance ROAS</span>
-      </motion.div>
-
-      {/* 3. 0.65s Fluid Web Speed - Bottom Left */}
-      <motion.div
-        animate={{
-          y: [-6, 6, -6],
-          x: [2, -2, 2],
-        }}
-        transition={{
-          duration: 7.8,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1.2,
-        }}
-        className="absolute bottom-[20%] left-[5%] hidden lg:flex items-center gap-2.5 px-3 py-1.5 rounded-lg bg-white/95 border border-[#E8E1D0] shadow-xs backdrop-blur-xs text-[#1F2937] text-xs font-semibold"
-      >
-        <Zap className="w-3.5 h-3.5 text-[#D4AF37]" />
-        <span className="font-fonarto text-[#111111]">
-          0.65s Fluid Load Speed • Core Web Vitals
-        </span>
-      </motion.div>
-
-      {/* 4. Page 1 Google SEO Dominance - Bottom Right */}
-      <motion.div
-        animate={{
-          y: [6, -6, 6],
-          x: [-2, 2, -2],
-        }}
-        transition={{
-          duration: 8.2,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1.8,
-        }}
-        className="absolute bottom-[18%] right-[5%] hidden lg:flex items-center gap-2.5 px-3 py-1.5 rounded-lg bg-white/95 border border-[#E8E1D0] shadow-xs backdrop-blur-xs text-[#1F2937] text-xs font-semibold"
-      >
-        <Search className="w-3.5 h-3.5 text-[#0A66C2]" />
-        <span className="font-fonarto text-[#111111]">Rank 1 Google Organic Rankings</span>
-      </motion.div>
     </div>
   );
 };
