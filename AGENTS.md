@@ -1,0 +1,1 @@
+- Hostinger/static deploy: `bun run build:static` prerenders every page (list in vite.config.ts) into ./dist with .htaccess; new pages must be added to that list. Why: shared hosting has no Node runtime.
