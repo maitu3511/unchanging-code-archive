@@ -12,10 +12,30 @@ export default defineConfig({
     server: { entry: "server" },
     ...(isStatic
       ? {
-          // Pages not linked from the homepage are listed explicitly so they get prerendered too.
-          pages: ["blog", "process", "areas-we-serve", "terms", "privacy"].map((p) => ({
-            path: `/${p}`,
-          })),
+          // Every page is listed explicitly so each gets its own index.html.
+          pages: [
+            "/",
+            "/about",
+            "/portfolio",
+            "/pricing",
+            "/process",
+            "/training",
+            "/careers",
+            "/blog",
+            "/contact",
+            "/areas-we-serve",
+            "/terms",
+            "/privacy",
+            "/services",
+            ...[
+              "seo",
+              "digital-marketing",
+              "google-ads",
+              "web-development",
+              "social-media-marketing",
+              "shopify-development",
+            ].map((s) => `/services/${s}`),
+          ].map((path) => ({ path })),
           prerender: {
             enabled: true,
             crawlLinks: true,
