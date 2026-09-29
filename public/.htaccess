@@ -1,15 +1,24 @@
 # Hostinger (Apache / LiteSpeed) settings for the static build
 DirectoryIndex index.html
+Options -MultiViews
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  RewriteBase /
 
   # Force HTTPS
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # Serve real files and folders (each page has its own folder/index.html)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Anything else -> app (shows the site's own pages / not-found page)
+  RewriteRule ^ index.html [L]
 </IfModule>
 
-# Unknown URLs -> app (shows the site's own not-found page)
 ErrorDocument 404 /index.html
 
 # Compression
@@ -28,4 +37,6 @@ ErrorDocument 404 /index.html
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType video/webm "access plus 1 year"
 </IfModule>
