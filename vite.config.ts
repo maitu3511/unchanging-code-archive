@@ -48,5 +48,5 @@ export default defineConfig({
   },
   // On Netlify (NETLIFY=true is set automatically during Netlify builds), emit a
   // Netlify-compatible output (dist + .netlify/functions-internal) instead of Cloudflare.
-  ...(process.env.NETLIFY ? { nitro: { preset: "netlify" } } : {}),
+  ...(process.env.NETLIFY && !isStatic ? { nitro: { preset: "netlify" } } : {}),
 });
