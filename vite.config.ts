@@ -26,6 +26,7 @@ export default defineConfig({
             "/areas-we-serve",
             "/terms",
             "/privacy",
+            "/admin",
             "/services",
             ...[
               "seo",

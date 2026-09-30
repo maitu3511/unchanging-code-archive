@@ -28,6 +28,7 @@ const contentPages = new Set([
   "areas-we-serve",
   "terms",
   "privacy",
+  "admin",
 ]);
 
 function getPageSchema(page: PageType): object[] {
@@ -74,6 +75,15 @@ export const Route = createFileRoute("/$page")({
   head: ({ loaderData }) => {
     const page = loaderData?.page;
     if (!page) return {};
+    if (page === "admin") {
+      return {
+        meta: [
+          { title: "Admin Panel — DigiBasera" },
+          { name: "description", content: "Private DigiBasera admin panel." },
+          { name: "robots", content: "noindex, nofollow" },
+        ],
+      };
+    }
     const seo = PAGE_SEO_CONFIG[page];
     const pageTitle = page.charAt(0).toUpperCase() + page.slice(1);
     const pageSchemas = getPageSchema(page);
