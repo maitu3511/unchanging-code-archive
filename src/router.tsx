@@ -10,6 +10,10 @@ export const getRouter = () => {
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,
+    // Keep trailing-slash URLs rendering instead of 307-redirecting to the
+    // canonical path; the static prerenderer requests routes with a slash
+    // and cannot follow redirects.
+    trailingSlash: "preserve",
   });
 
   return router;
