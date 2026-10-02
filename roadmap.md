@@ -35,3 +35,6 @@
 - [x] Check named headings and reviews on desktop and mobile
 - [x] Keep home hero lettering legible when the hidden image is revealed
 - [x] Remove the four floating labels from the home hero background animation
+
+- [x] Inquiry form aur purane phone numbers ko +91 98987 78047 par update karna
+- [x] Netlify static build verify karna (bun run build:static, dist ready)
