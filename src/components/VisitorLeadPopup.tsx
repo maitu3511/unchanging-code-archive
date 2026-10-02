@@ -394,7 +394,7 @@ export const VisitorLeadPopup: React.FC<VisitorLeadPopupProps> = ({
                     </div>
 
                     <div className="pt-4 text-xs text-[#78590C] font-medium border-t border-[#E8DFC5]/60 mt-4">
-                      Direct WhatsApp: <strong className="text-[#111111]">+91 91730 08118</strong>
+                      Direct WhatsApp: <strong className="text-[#111111]">+91 98987 78047</strong>
                     </div>
                   </div>
 

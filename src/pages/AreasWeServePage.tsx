@@ -719,7 +719,7 @@ export const AreasWeServePage: React.FC<AreasWeServePageProps> = ({
             </button>
 
             <a
-              href={`https://wa.me/919723046083?text=${encodeURIComponent(
+              href={`https://wa.me/919898778047?text=${encodeURIComponent(
                 "Hello DigiBasera, I want to inquire about Digital Marketing and SEO services for my city.",
               )}`}
               target="_blank"

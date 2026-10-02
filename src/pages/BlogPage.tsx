@@ -822,11 +822,11 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, onOpenConsultati
                   </button>
 
                   <a
-                    href="tel:+919173008118"
+                    href="tel:+919898778047"
                     className="w-full py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center justify-center gap-2 transition-colors"
                   >
                     <Phone className="w-3.5 h-3.5 text-[#D4AF37]" />
-                    <span>Call +91 91730 08118</span>
+                    <span>Call +91 98987 78047</span>
                   </a>
                 </div>
               </div>
