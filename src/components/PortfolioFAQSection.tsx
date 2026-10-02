@@ -47,7 +47,7 @@ const FAQS: FAQItem[] = [
   {
     question: "How do I start with a free digital audit or consultation?",
     answer:
-      'Simply click "Request Free Audit" or reach out via WhatsApp at +91 91730 08118. Our strategists will review your existing website, keyword visibility, and competitor landscape to provide a customized growth blueprint.',
+      'Simply click "Request Free Audit" or reach out via WhatsApp at +91 98987 78047. Our strategists will review your existing website, keyword visibility, and competitor landscape to provide a customized growth blueprint.',
     tags: ["Consultation", "Free Audit"],
   },
 ];
