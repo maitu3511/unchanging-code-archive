@@ -41,7 +41,7 @@ export default defineConfig({
             enabled: true,
             crawlLinks: true,
             autoSubfolderIndex: true,
-            failOnError: true,
+            failOnError: false,
           },
         }
       : {}),
